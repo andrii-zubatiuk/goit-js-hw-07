@@ -35,4 +35,4 @@ const createGallery = images => {
   return listRef;
 };
 
-console.log(createGallery(images));
+createGallery(images);

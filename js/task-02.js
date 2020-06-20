@@ -19,4 +19,4 @@ const createListItem = ingredients => {
   return listRef;
 };
 
-console.log(createListItem(ingredients));
+createListItem(ingredients);

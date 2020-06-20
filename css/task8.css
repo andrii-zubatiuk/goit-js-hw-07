@@ -1,0 +1,8 @@
+#boxes {
+  display: flex;
+  align-items: center;
+}
+
+#controls {
+  margin-bottom: 20px;
+}
