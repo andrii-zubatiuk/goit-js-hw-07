@@ -19,10 +19,9 @@ const images = [
 const createGallery = images => {
   const listRef = document.querySelector('#gallery');
 
-  images.forEach(image => {
+  const arrItems = images.map(image => {
     const listItemRef = document.createElement('li');
     listItemRef.classList.add('gallery__item');
-    listRef.append(listItemRef);
 
     const imgRef = document.createElement('img');
     imgRef.setAttribute('src', image.url);
@@ -30,9 +29,11 @@ const createGallery = images => {
     imgRef.setAttribute('width', '350px');
     imgRef.setAttribute('height', '230px');
     listItemRef.append(imgRef);
+
+    return listItemRef;
   });
 
-  return listRef;
+  listRef.append(...arrItems);
 };
 
 createGallery(images);
